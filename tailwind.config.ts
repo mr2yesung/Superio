@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -16,6 +17,23 @@ const config: Config = {
       colors: {
         primary: "#1967d2",
         "primary-hover": "#0146a6",
+      },
+      screens: {
+        xxl: "1600px",
+      },
+      keyframes: {
+        slideInDown: {
+          "0%": {
+            transform: "translate3d(0, -100%, 0)",
+            visibility: "visible",
+          },
+          "100%": {
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+      },
+      animation: {
+        "slide-in-down": "slideInDown 1s",
       },
     },
   },
