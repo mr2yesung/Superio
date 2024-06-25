@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/header/Header";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -26,8 +25,6 @@ function RootLayout({
     <html lang="en">
       <body className={`${jost.className} bg-white text-[#363636]`}>
         <div className="relative mx-auto my-0 w-full min-w-[300px] overflow-hidden">
-          <Header />
-
           {children}
         </div>
       </body>
@@ -37,3 +34,8 @@ function RootLayout({
 
 export default RootLayout;
 export { metadata };
+
+/**
+ * TODO: Header right section modify when user logged in (employer, candidate)
+ * TODO: Header navbar components modify if needed
+ */

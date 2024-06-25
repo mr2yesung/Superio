@@ -25,7 +25,6 @@ const config: Config = {
         slideInDown: {
           "0%": {
             transform: "translate3d(0, -100%, 0)",
-            visibility: "visible",
           },
           "100%": {
             transform: "translate3d(0, 0, 0)",
@@ -33,7 +32,7 @@ const config: Config = {
         },
       },
       animation: {
-        "slide-in-down": "slideInDown 1s",
+        "slide-in-down": "slideInDown 1s ease",
       },
     },
   },
