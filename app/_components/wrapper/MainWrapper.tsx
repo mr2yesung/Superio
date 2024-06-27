@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
 type MainWrapperProps = {
@@ -9,7 +10,9 @@ function MainWrapper({ children }: MainWrapperProps) {
     <>
       <Header />
 
-      <main>{children}</main>
+      <main className="relative">{children}</main>
+
+      <Footer />
     </>
   );
 }
