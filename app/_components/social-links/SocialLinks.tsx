@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 function SocialLinks() {
   const socialLinks = [
@@ -28,9 +27,9 @@ function SocialLinks() {
   return (
     <div className="flex gap-x-[37px] justify-start items-center">
       {socialLinks.map(({ name, iconPath, href }) => (
-        <Link key={name} href={href}>
+        <a key={name} href={href} target="_blank" rel="noopener noreferrer">
           <Image width={20} height={20} src={iconPath} alt={name} />
-        </Link>
+        </a>
       ))}
     </div>
   );
