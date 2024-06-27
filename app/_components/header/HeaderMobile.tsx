@@ -29,7 +29,7 @@ function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-[0_6px_15px_#404f680d] xl:hidden">
-      <div className="max-w-[1310px] py-0 px-[15px] my-0 mx-auto w-full">
+      <div className="div-container">
         <div className="flex justify-between items-center">
           <div className="relative flex items-center">
             <HeaderLogo />

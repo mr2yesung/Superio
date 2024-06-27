@@ -9,7 +9,7 @@ function MainWrapper({ children }: MainWrapperProps) {
     <>
       <Header />
 
-      {children}
+      <main>{children}</main>
     </>
   );
 }

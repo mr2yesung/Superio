@@ -31,9 +31,9 @@ function HeaderMonitor({ navbarComponents }: HeaderMonitorProps) {
 
   return (
     <header
-      className={`top-0 left-0 w-full z-50 bg-white ${
+      className={`top-0 left-0 w-full z-50 ${
         isNavbarFixed
-          ? "fixed animate-slide-in-down shadow-[0_0_10px_#0000001a]"
+          ? "fixed animate-slide-in-down shadow-[0_0_10px_#0000001a] bg-white"
           : "absolute"
       }`}
     >

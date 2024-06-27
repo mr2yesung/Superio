@@ -5,3 +5,9 @@
 *:focus-visible {
   outline: none;
 }
+
+@layer components {
+  .div-container {
+    @apply max-w-[1310px] py-0 px-5 my-0 mx-auto w-full md:px-[15px];
+  }
+}

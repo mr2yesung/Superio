@@ -1,10 +1,10 @@
+import Hero from "./_components/hero/Hero";
 import MainWrapper from "./_components/wrapper/MainWrapper";
 
 function Home() {
-  // test header scrolling with h-[200vh]
   return (
     <MainWrapper>
-      <h1 className="h-[200vh]">Superio</h1>
+      <Hero />
     </MainWrapper>
   );
 }
