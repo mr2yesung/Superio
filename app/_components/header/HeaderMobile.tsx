@@ -41,6 +41,7 @@ function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
               onClick={handleCloseNavbar}
             ></div>
 
+            {/* refactor */}
             <div
               className={`${
                 isNavbarOpen ? "translate-x-0" : "-translate-x-full"
@@ -69,7 +70,7 @@ function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
                           className={`flex items-center text-base h-[50px] cursor-pointer px-5 hover:bg-[rgb(243,243,243)] transition-all duration-300 ${
                             pathName === href
                               ? "bg-[rgb(243,243,243)] text-primary"
-                              : ""
+                              : "text-text-primary"
                           }`}
                         >
                           {name}
@@ -91,7 +92,7 @@ function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
                 <div className="p-0">
                   <div className="py-[18px] px-0">
                     <div className="text-lg leading-7 mb-[13px] font-medium">
-                      <span className="text-[#7e7e7e] block">Call us</span>
+                      <span className="text-text-secondary block">Call us</span>
 
                       <Link
                         href={"tel:9498361299"}
@@ -101,13 +102,13 @@ function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
                       </Link>
                     </div>
 
-                    <span className="text-sm leading-[30px] text-[#7e7e7e] block">
+                    <span className="text-sm leading-[30px] text-text-secondary block">
                       Irvine, CA
                     </span>
 
                     <Link
                       href={"mailto:yeseonk@uci.edu"}
-                      className="text-sm leading-[30px] text-[#7e7e7e]"
+                      className="text-sm leading-[30px] text-text-secondary"
                     >
                       yeseonk@uci.edu
                     </Link>

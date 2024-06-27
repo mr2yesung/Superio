@@ -49,7 +49,7 @@ function HeaderMonitor({ navbarComponents }: HeaderMonitorProps) {
                     key={name}
                     href={href}
                     className={`relative px-0 py-5 transition-all duration-300 cursor-pointer hover:text-primary ${
-                      pathName === href ? "text-primary" : ""
+                      pathName === href ? "text-primary" : "text-text-primary"
                     }`}
                   >
                     {name}

@@ -13,12 +13,12 @@ function Hero() {
               animationClassName="animate-fade-up-500"
             >
               <div className="mb-10">
-                <h3 className="m-0 font-medium text-[#202124] text-[26px] mb-[6px] md:text-[40px] md:leading-[1.2em] md:mb-5 xl:text-[50px] xl:mb-[25px] xxl:leading-[60px]">
+                <h3 className="m-0 font-medium text-text-primary text-[26px] mb-[6px] md:text-[40px] md:leading-[1.2em] md:mb-5 xl:text-[50px] xl:mb-[25px] xxl:leading-[60px]">
                   Superio - Best Job Board for
                   <br />
                   <span className="text-primary">Software Engineers</span>
                 </h3>
-                <p className="text-[15px] text-[#696969] leading-[25px] font-normal m-0">
+                <p className="text-[15px] text-text-secondary leading-[25px] font-normal m-0">
                   Find Jobs, Employment &amp; Career Opportunities
                 </p>
               </div>
@@ -39,7 +39,7 @@ function Hero() {
                         type="text"
                         name="job-title"
                         placeholder="Job title or keywords"
-                        className="pl-2 h-5 xl:h-[30px] bg-transparent leading-5 xl:leading-[30px] text-sm xl:text-[15px] text-[#696969] font-normal"
+                        className="pl-2 h-5 xl:h-[30px] bg-transparent leading-5 xl:leading-[30px] text-sm xl:text-[15px] text-text-secondary font-normal"
                       />
                     </div>
 
@@ -55,7 +55,7 @@ function Hero() {
                         type="text"
                         name="location"
                         placeholder="City or State"
-                        className="pl-2 h-5 xl:h-[30px] bg-transparent leading-5 xl:leading-[30px] text-sm xl:text-[15px] text-[#696969] font-normal"
+                        className="pl-2 h-5 xl:h-[30px] bg-transparent leading-5 xl:leading-[30px] text-sm xl:text-[15px] text-text-secondary font-normal"
                       />
                     </div>
 
@@ -67,10 +67,10 @@ function Hero() {
               </div>
 
               <ScrollEffect
-                className="text-[#696969] text-[14px] font-normal mt-[90px] lg:mt-0"
+                className="text-text-secondary text-[14px] font-normal mt-[90px] lg:mt-0"
                 animationClassName="animate-fade-up-1000"
               >
-                <span className="lg:text-[15px] text-[#202124] block md:inline font-medium md:mr-5">
+                <span className="lg:text-[15px] text-text-primary block md:inline font-medium md:mr-5">
                   Popular Searches:
                 </span>
                 Web, IOS, PHP, Android, Software Engineer
@@ -118,7 +118,7 @@ function Hero() {
                 >
                   Apply for Jobs
                   <br />
-                  <span className="text-[15px] text-[#696969]">
+                  <span className="text-[15px] text-text-secondary">
                     Begin your journey today
                   </span>
                 </BubbleContent>
@@ -135,7 +135,7 @@ function Hero() {
                 >
                   Upload your CV
                   <br />
-                  <span className="text-[15px] text-[#696969]">
+                  <span className="text-[15px] text-text-secondary">
                     It only takes a few seconds
                   </span>
                 </BubbleContent>
@@ -170,7 +170,7 @@ function BubbleContent({
       >
         <Image width={30} height={30} src={iconSrc} alt={iconAlt} />
       </div>
-      <p className="text-base leading-[22px] text-[#202124] font-medium">
+      <p className="text-base leading-[22px] text-text-primary font-medium">
         {children}
       </p>
     </>

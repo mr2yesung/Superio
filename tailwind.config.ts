@@ -16,6 +16,8 @@ const config: Config = {
       colors: {
         primary: "#1967d2",
         "primary-hover": "#0146a6",
+        "text-primary": "#202124",
+        "text-secondary": "#696969",
       },
       screens: {
         xxl: "1600px",
