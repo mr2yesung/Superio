@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollEffect from "../scroll-effect/ScrollEffect";
 import HeroBubble from "./HeroBubble";
+import ButtonPrimary from "../button/ButtonPrimary";
 
 function Hero() {
   return (
@@ -59,9 +60,12 @@ function Hero() {
                       />
                     </div>
 
-                    <button className="w-full lg:w-auto mt-[10px] lg:mt-0 text-center text-[15px] leading-5 rounded-lg px-[35px] py-[15px] xl:py-5 min-w-[150px] cursor-pointer whitespace-nowrap text-white bg-primary transition-colors overflow-hidden hover:bg-primary-hover">
+                    <ButtonPrimary
+                      type="submit"
+                      className="lg:w-auto mt-[10px] lg:mt-0 text-[15px] leading-5 rounded-lg py-[15px] xl:py-5 min-w-[150px]"
+                    >
                       Find Jobs
-                    </button>
+                    </ButtonPrimary>
                   </div>
                 </form>
               </div>
@@ -118,7 +122,7 @@ function Hero() {
                 >
                   Apply for Jobs
                   <br />
-                  <span className="text-[15px] text-text-secondary">
+                  <span className="text-[15px] text-text-secondary font-normal">
                     Begin your journey today
                   </span>
                 </BubbleContent>
@@ -135,7 +139,7 @@ function Hero() {
                 >
                   Upload your CV
                   <br />
-                  <span className="text-[15px] text-text-secondary">
+                  <span className="text-[15px] text-text-secondary font-normal">
                     It only takes a few seconds
                   </span>
                 </BubbleContent>

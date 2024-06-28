@@ -11,7 +11,7 @@ const jost = Jost({
 const metadata: Metadata = {
   title: {
     template: "%s - Superio",
-    default: "Superio",
+    default: "Superio - Find your jobs easily",
   },
   description: "Superio - Find your jobs easily",
 };
