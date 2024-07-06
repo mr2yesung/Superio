@@ -38,4 +38,5 @@ export { metadata };
 /**
  * TODO: Header right section modify when user logged in (employer, candidate)
  * TODO: Header navbar components modify if needed
+ * TODO: add toast to sign in and sign up (authform)
  */

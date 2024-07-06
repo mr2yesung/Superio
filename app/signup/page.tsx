@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import LoginWrapper from "../_components/wrapper/LoginWrapper";
-import SocialLogin from "../_components/login/SocialLogin";
+import SocialLogin from "../_components/auth/SocialLogin";
 import Link from "next/link";
 import SignupForm from "./SignupForm";
 

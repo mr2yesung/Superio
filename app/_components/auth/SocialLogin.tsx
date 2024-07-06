@@ -1,12 +1,22 @@
+"use client";
+
+import { signInUserOAuth } from "@/app/_utils/authClient";
+
 function SocialLogin() {
   return (
     <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-6">
-      <SocialLoginButton className="hover:bg-[#dc4d28] text-[#dc4d28] border-[#dc4d28]">
+      <SocialLoginButton
+        onClick={() => signInUserOAuth("google")}
+        className="hover:bg-[#dc4d28] text-[#dc4d28] border-[#dc4d28]"
+      >
         <GoogleIcon />
         Log In via Google
       </SocialLoginButton>
 
-      <SocialLoginButton className="text-text-secondary border-text-secondary hover:bg-text-secondary">
+      <SocialLoginButton
+        onClick={() => signInUserOAuth("github")}
+        className="text-text-secondary border-text-secondary hover:bg-text-secondary"
+      >
         <GithubIcon />
         Log In via GitHub
       </SocialLoginButton>
@@ -18,15 +28,18 @@ export default SocialLogin;
 
 type SocialLoginButtonProps = {
   className?: string;
+  onClick: () => void;
   children: React.ReactNode;
 };
 
 function SocialLoginButton({
   className = "",
+  onClick,
   children,
 }: SocialLoginButtonProps) {
   return (
     <button
+      onClick={onClick}
       className={`w-full rounded-lg flex justify-center items-center gap-x-[10px] whitespace-nowrap border-[1px] text-sm font-medium leading-[25px] py-[10px] transition-all duration-500 hover:text-white ${className}`}
     >
       {children}

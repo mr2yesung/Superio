@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import LoginWrapper from "../_components/wrapper/LoginWrapper";
 import LoginForm from "./LoginForm";
-import SocialLogin from "../_components/login/SocialLogin";
+import SocialLogin from "../_components/auth/SocialLogin";
 import Link from "next/link";
 
 const metadata: Metadata = {
