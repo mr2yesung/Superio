@@ -4,7 +4,7 @@ import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { SupabaseAdapter } from "@next-auth/supabase-adapter";
 import jwt from "jsonwebtoken";
-import { signInCredentials } from "@/app/_lib/authSupabaseQuery";
+import { getUserType, signInCredentials } from "@/app/_lib/authSupabaseQuery";
 
 const authOptions: AuthOptions = {
   providers: [
@@ -42,6 +42,16 @@ const authOptions: AuthOptions = {
     async jwt({ token, user }) {
       if (user?.id) token.sub = user.id;
 
+      // userType cannot be changed after assigning a value to the account
+      // it is not recommended to call getUserType every time the jwt callback is called (when session is accessed)
+      // only fetch userType when userType does not exist inside the token
+      if (!token.userType) {
+        const response = await getUserType(token.sub ?? "");
+
+        if (response.status === "success")
+          token.userType = response.data.userType;
+      }
+
       return token;
     },
     async session({ session, user, token }) {
@@ -61,6 +71,8 @@ const authOptions: AuthOptions = {
       }
 
       if (token.sub) session.user.id = token.sub;
+
+      if (token.userType) session.user.userType = token.userType;
 
       return session;
     },
