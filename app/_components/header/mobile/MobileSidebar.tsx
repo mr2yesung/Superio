@@ -1,7 +1,7 @@
 "use client";
 
-import Logo from "../logo/Logo";
-import SocialLinks from "../social-links/SocialLinks";
+import Logo from "../../logo/Logo";
+import SocialLinks from "../../social-links/SocialLinks";
 import Image from "next/image";
 import Link from "next/link";
 

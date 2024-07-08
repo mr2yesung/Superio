@@ -3,6 +3,8 @@
 import { useState } from "react";
 import ButtonPrimary from "../button/ButtonPrimary";
 import FormElement from "../form/FormElement";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 type AuthFormProps = {
   onSubmit: (email: string, password: string) => Promise<void>;
@@ -20,6 +22,8 @@ function AuthForm({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { update } = useSession();
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -32,8 +36,10 @@ function AuthForm({
     try {
       await onSubmit(email, password);
 
-      // full page loading when successfully sign in
-      window.location.href = "/";
+      await update();
+
+      router.replace("/");
+      router.refresh();
     } catch (error) {
       if (error instanceof Error) {
         console.error(error.message);

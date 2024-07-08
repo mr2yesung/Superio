@@ -10,17 +10,13 @@ export async function middleware(req: NextRequest) {
   });
   const pathname = req.nextUrl.pathname;
 
-  console.log(token);
-  console.log(pathname);
-
   if (pathname.startsWith("/dashboard")) {
     // redirect to login route when unauthenticated user access dashboard and its child page
     if (!token) return NextResponse.redirect(new URL("/login", req.url));
 
     // redirect to user type select route when unselected user access dashboard and its child page
-    if (!token.userType) {
+    if (!token.userType)
       return NextResponse.redirect(new URL("/select-type", req.url));
-    }
   }
 
   // redirect to home route when authenticated user access login or signup page
@@ -37,7 +33,7 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/login", "/signup", "/dashboard/:path*", "/select-type"],
+  matcher: ["/", "/login", "/signup", "/dashboard/:path*", "/select-type"],
 };
 
 // config is not applied if exported as the following

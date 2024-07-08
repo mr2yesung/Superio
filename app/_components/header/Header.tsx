@@ -1,5 +1,5 @@
-import HeaderMobile from "./HeaderMobile";
-import HeaderMonitor from "./HeaderMonitor";
+import HeaderMobile from "./mobile/HeaderMobile";
+import HeaderMonitor from "./monitor/HeaderMonitor";
 
 function Header() {
   const navbarComponents = [

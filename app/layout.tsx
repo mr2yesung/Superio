@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
+import SessionProviderWrapper from "./_components/wrapper/SessionProviderWrapper";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -24,9 +25,11 @@ function RootLayout({
   return (
     <html lang="en">
       <body className={`${jost.className} bg-white text-[#363636]`}>
-        <div className="relative mx-auto my-0 w-full min-w-[300px] overflow-hidden">
-          {children}
-        </div>
+        <SessionProviderWrapper>
+          <div className="relative mx-auto my-0 w-full min-w-[300px] overflow-hidden">
+            {children}
+          </div>
+        </SessionProviderWrapper>
       </body>
     </html>
   );

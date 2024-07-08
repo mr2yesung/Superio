@@ -1,6 +1,6 @@
-import HeaderLogo from "./HeaderLogo";
-import HeaderScrollWrapper from "./wrapper/HeaderScrollWrapper";
-import NavLink from "./NavLink";
+import HeaderLogo from "../HeaderLogo";
+import HeaderScrollWrapper from "../wrapper/HeaderScrollWrapper";
+import NavLink from "../NavLink";
 import HeaderMonitorRight from "./HeaderMonitorRight";
 
 type HeaderMonitorProps = {

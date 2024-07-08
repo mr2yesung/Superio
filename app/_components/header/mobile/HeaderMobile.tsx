@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import HeaderLogo from "./HeaderLogo";
-import NavLink from "./NavLink";
+import HeaderLogo from "../HeaderLogo";
+import NavLink from "../NavLink";
 import MobileSidebarController from "./MobileSidebarController";
-import { getServerSession } from "next-auth";
+import MobileUserIcon from "./MobileUserIcon";
 
 type HeaderMobileProps = {
   navbarComponents: {
@@ -13,8 +11,6 @@ type HeaderMobileProps = {
 };
 
 async function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
-  const session = await getServerSession();
-
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-[0_6px_15px_#404f680d] xl:hidden">
       <div className="div-container">
@@ -24,17 +20,7 @@ async function HeaderMobile({ navbarComponents }: HeaderMobileProps) {
           </div>
 
           <div className="relative flex justify-center items-center">
-            <Link
-              href={session?.user ? "/dashboard" : "/login"}
-              className="cursor-pointer"
-            >
-              <Image
-                width={24}
-                height={24}
-                src={"/images/icons/user.svg"}
-                alt="Login / Register"
-              />
-            </Link>
+            <MobileUserIcon />
 
             <MobileSidebarController>
               {/* side bar contents */}

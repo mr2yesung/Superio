@@ -5,10 +5,14 @@ import UserTypeSelection from "../_components/auth/UserTypeSelection";
 import { userType } from "../_lib/types/userType";
 import ButtonPrimary from "../_components/button/ButtonPrimary";
 import { postUserTypeClient } from "../_utils/authClient";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function UserTypeForm() {
   const [userType, setUserType] = useState<userType>("candidate");
   const [isLoading, setIsLoading] = useState(false);
+  const { update } = useSession();
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,8 +24,10 @@ function UserTypeForm() {
     try {
       await postUserTypeClient(userType);
 
-      // full page loading when successfully set user type
-      window.location.href = "/";
+      await update();
+
+      router.replace("/");
+      router.refresh();
     } catch (error) {
       console.error(error);
       // toast
