@@ -7,14 +7,13 @@ declare module "next-auth" {
     supabaseAccessToken?: string;
     user: {
       id: string;
-      userType: userType;
-      address: string;
+      userType?: userType;
     } & DefaultSession["user"];
   }
 }
 
 declare module "next-auth/jwt" {
   interface JWT {
-    userType: userType;
+    userType?: userType;
   }
 }

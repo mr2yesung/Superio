@@ -1,17 +1,12 @@
-"use client";
-
-import { useSession } from "next-auth/react";
+import { getCurrentUser } from "@/app/_lib/user";
 import Image from "next/image";
 import Link from "next/link";
 
-function MobileUserIcon() {
-  const { status } = useSession();
+async function MobileUserIcon() {
+  const user = await getCurrentUser();
 
   return (
-    <Link
-      href={status === "authenticated" ? "/dashboard" : "/login"}
-      className="cursor-pointer"
-    >
+    <Link href={user ? "/dashboard" : "/login"} className="cursor-pointer">
       <Image
         width={24}
         height={24}

@@ -1,14 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import Logout from "../../auth/Logout";
-import { useSession } from "next-auth/react";
+import { getCurrentUser } from "@/app/_lib/user";
 
-function HeaderMonitorRight() {
-  const { status } = useSession();
+async function HeaderMonitorRight() {
+  const user = await getCurrentUser();
 
   // change to user icon with dropdown menu
-  if (status === "authenticated") return <Logout />;
+  if (user) return <Logout />;
 
   return (
     <>
