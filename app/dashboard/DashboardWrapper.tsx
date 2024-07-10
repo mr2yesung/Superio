@@ -58,7 +58,7 @@ function DashboardWrapper({ title, children }: DashboardWrapperProps) {
 
   return (
     <div className="pt-10 px-[15px] md:px-[30px] xxl:pt-[60px] xxl:px-[60px]">
-      <div className="mb-10 xxl:mb-[60px]">
+      <div className="mb-10 xxl:mb-[60px] dashboard-left-span">
         <h3 className="mb-[5px] text-2xl leading-[1.3em] font-medium text-text-primary md:mb-[10px] md:text-3xl md:leading-[41px]">
           {title}
         </h3>
@@ -110,7 +110,7 @@ function DashboardWrapper({ title, children }: DashboardWrapperProps) {
         </div>
       </DashboardSidebarController>
 
-      {children}
+      <div className="dashboard-left-span">{children}</div>
     </div>
   );
 }

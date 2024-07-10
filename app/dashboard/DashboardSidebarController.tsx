@@ -23,7 +23,7 @@ function DashboardSidebarController({
 
   return (
     <>
-      <div className="mx-0 mb-6 w-fit lg:hidden">
+      <div className="mx-0 mb-6 w-fit xl:hidden">
         <ButtonLightSecondary
           className="text-sm leading-[25px] px-[30px] py-[10px] rounded-lg flex items-center justify-center gap-x-[10px]"
           onClick={handleOpenSidebar}
