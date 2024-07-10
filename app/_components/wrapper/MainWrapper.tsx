@@ -1,18 +1,16 @@
-import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
 type MainWrapperProps = {
+  className?: string;
   children: React.ReactNode;
 };
 
-function MainWrapper({ children }: MainWrapperProps) {
+function MainWrapper({ className = "", children }: MainWrapperProps) {
   return (
     <>
       <Header />
 
-      <main className="relative">{children}</main>
-
-      <Footer />
+      <main className={`relative ${className}`}>{children}</main>
     </>
   );
 }

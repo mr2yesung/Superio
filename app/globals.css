@@ -10,4 +10,8 @@
   .div-container {
     @apply max-w-[1310px] py-0 px-5 my-0 mx-auto w-full md:px-[15px];
   }
+
+  .header-span {
+    @apply mt-[70px] xl:mt-[80px];
+  }
 }

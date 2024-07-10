@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import DashboardWrapper from "./DashboardWrapper";
 
 const metadata: Metadata = {
   title: "Dashboard",
@@ -6,7 +7,11 @@ const metadata: Metadata = {
 };
 
 function Dashboard() {
-  return <h2 className="text-2xl my-44">Dashboard</h2>;
+  return (
+    <DashboardWrapper title="Hello, Yeseong!">
+      <div className="h-lvh">TEST</div>
+    </DashboardWrapper>
+  );
 }
 
 export default Dashboard;

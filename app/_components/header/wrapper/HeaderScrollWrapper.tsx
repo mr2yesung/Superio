@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type HeaderScrollWrapperProps = {
@@ -8,6 +9,7 @@ type HeaderScrollWrapperProps = {
 
 function HeaderScrollWrapper({ children }: HeaderScrollWrapperProps) {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+  const pathname = usePathname();
 
   function handleScroll() {
     if (window.scrollY > 0) {
@@ -27,10 +29,12 @@ function HeaderScrollWrapper({ children }: HeaderScrollWrapperProps) {
 
   return (
     <header
-      className={`top-0 left-0 w-full z-50 ${
-        isNavbarFixed
-          ? "fixed animate-slide-in-down shadow-[0_0_10px_#0000001a] bg-white"
-          : "absolute"
+      className={`fixed top-0 left-0 w-full z-50 ${
+        pathname === "/"
+          ? isNavbarFixed
+            ? "animate-slide-in-down shadow-[0_0_10px_#0000001a] bg-white"
+            : "absolute"
+          : "shadow-[0_0_10px_#0000001a] bg-white"
       }`}
     >
       {children}

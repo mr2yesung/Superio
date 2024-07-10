@@ -18,6 +18,9 @@ function MobileSidebarController({ children }: MobileSidebarControllerProps) {
   function handleCloseSidebar() {
     setIsSidebarOpen(false);
   }
+
+  // not rerendering on certain route change?
+
   return (
     <>
       <button className="cursor-pointer ml-5" onClick={handleOpenSidebar}>

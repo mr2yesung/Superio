@@ -39,7 +39,10 @@ export default RootLayout;
 export { metadata };
 
 /**
- * TODO: Header right section modify when user logged in (employer, candidate)
- * TODO: Header navbar components modify if needed
- * TODO: add toast to sign in and sign up (authform)
+ * TODO: Header right section modify when user logged in (HeaderMonitorRight component)
+ * TODO: Header navbar array modify if needed
+ * TODO: add toast to Authform and UserTypeForm components
+ * TODO: manage route in dashboard child pages
+ * TODO: fix rerendering of mobile header sidebar on route change (MobileSidebarController component)
+ * TODO: fix Logout component
  */

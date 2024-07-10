@@ -5,7 +5,9 @@ type DashboardLayoutProps = {
 };
 
 async function DashboardLayout({ children }: DashboardLayoutProps) {
-  return <MainWrapper>{children}</MainWrapper>;
+  return (
+    <MainWrapper className="bg-primary-bg header-span">{children}</MainWrapper>
+  );
 }
 
 export default DashboardLayout;
