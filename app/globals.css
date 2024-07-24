@@ -15,7 +15,15 @@
     @apply mt-[70px] xl:mt-[80px];
   }
 
-  .dashboard-left-span {
-    @apply xl:ml-[300px] xxl:ml-[365px];
+  .form-element-container {
+    @apply flex flex-col justify-center gap-y-[10px];
+  }
+
+  .form-element-label {
+    @apply text-text-primary text-[15px] leading-5 font-medium;
+  }
+
+  .form-element-input {
+    @apply w-full h-[60px] leading-[30px] py-[15px] px-5 text-text-secondary placeholder:text-text-secondary bg-[#f0f5f7] border-[#f0f5f7] border-[1px] rounded-lg transition-all duration-300 focus-visible:bg-white focus-visible:border-primary;
   }
 }

@@ -45,4 +45,5 @@ export { metadata };
  * TODO: manage route in dashboard child pages
  * TODO: fix rerendering of mobile header sidebar on route change (MobileSidebarController component)
  * TODO: fix Logout component
+ * TODO: add dropdown navbar to header and dashboard wrapper
  */

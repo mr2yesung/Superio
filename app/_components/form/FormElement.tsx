@@ -15,12 +15,10 @@ function FormElement({
   value,
   onChange,
 }: FormElementProps) {
+  // using server action, no use useState in React
   return (
-    <div className="flex flex-col justify-center gap-y-[10px]">
-      <label
-        htmlFor={name}
-        className="text-text-primary text-[15px] leading-5 font-medium"
-      >
+    <div className="form-element-container">
+      <label htmlFor={name} className="form-element-label">
         {label}
       </label>
       <input
@@ -31,7 +29,7 @@ function FormElement({
         value={value}
         onChange={onChange}
         required
-        className="w-full h-[60px] leading-[30px] py-[15px] px-5 text-text-secondary bg-[#f0f5f7] border-[#f0f5f7] border-[1px] rounded-lg transition-all duration-300 focus-visible:bg-white focus-visible:border-primary"
+        className="form-element-input"
       />
     </div>
   );
